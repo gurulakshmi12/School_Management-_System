@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #00f260, #d00af3); /* Green to blue gradient */
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        a:hover {
+            background: #ffffff;
+            color: #0575e6;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Welcome to the School Management System</h1>
+        <a href="{% url 'register' %}">Register a Student</a>
+        <a href="{% url 'history' %}">View Students</a>
+    </div>
+</body>
+</html>

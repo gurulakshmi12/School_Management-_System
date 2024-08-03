@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student History</title>
+    <style>
+        body {
+            background: linear-gradient(to right, teal, lightgreen);
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        li {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+        }
+        li span {
+            display: block;
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student History</h1>
+    <ul>
+        {% for student in students %}
+        <li>
+            <span>{{ student.first_name }}</span><br>
+            <span>{{ student.last_name }}</span>
+            <span>{{ student.class_name }}</span><br>
+            <span>{{ student.school_name }}</span><br>
+            <span>{{ student.hobbies }}</span><br>
+            <span>{{ student.course }}</span><br>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'home' %}">Back to Home</a>
+</body>
+</html>
